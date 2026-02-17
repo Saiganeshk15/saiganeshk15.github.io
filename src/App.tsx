@@ -34,7 +34,7 @@ function App() {
       id: 'exp1',
       company: 'IEEE - VBIT SB',
       position: 'Web Master',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       description: [
         "Developed and maintained the official website of IEEE VBIT SB",
         "Improved website performance by 20% through dependency optimization and image compression",
@@ -45,7 +45,7 @@ function App() {
       id: 'exp2',
       company: 'coding.Studio();',
       position: 'Executive',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       description: [
         "Developed applications for tracking late attendees for our institution and scheduling meetings of communities within the college",
         "Managing existing LMS and assessment submission portal",
@@ -198,7 +198,7 @@ function App() {
                 <Briefcase className="w-8 h-8 mb-6 text-purple-400 group-hover:scale-110 transition-transform" />
                 <h2 className="text-2xl font-bold mb-4">Skills</h2>
                 <div className="flex flex-wrap gap-3">
-                  {["React.js", "Node.js", "Express.js", "JavaScript", "Python", "SQL", "TypeScript", "TensorFlow", "Scikit-learn", "Pandas", "Firebase", "OpenCV", "NLP", "REST APIs", "Tailwind CSS", "Git", "GitHub", "VS Code", "Android Studio", "Jupyter Notebook", "Vite", "Java"].map(skill => (
+                  {["React.js", "Node.js", "Express.js", "Flutter", "Firebase", "SQL", "TypeScript", "Tailwind CSS", "Python", "TensorFlow", "Scikit-learn", "Pandas", "OpenCV", "NLP", "REST APIs", "Git", "GitHub"].map(skill => (
                     <span 
                       key={skill} 
                       className="px-4 py-2 bg-purple-500/20 rounded-full text-sm border border-purple-500/30 hover:bg-purple-500/30 transition-colors"
