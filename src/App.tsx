@@ -19,6 +19,13 @@ interface Experience {
   description: string[];
 }
 
+interface EdExperience {
+  id: string;
+  college: string;
+  course: string;
+  period: string;
+}
+
 interface Achievement {
   id: string;
   title: string;
@@ -54,6 +61,20 @@ function App() {
     }
   ];
 
+  const ed_experiences: EdExperience[] = [
+    {
+      id: 'edexp1',
+      college: 'University of Hyderabad - SCIS',
+      course: 'Masters of Technology - Artificial Inteligence',
+      period: '2025 - Present'
+    },
+    {
+      id: 'edexp2',
+      college: 'Vignana Bharathi Institute of Technology',
+      course: 'Bachelors of Technology - AI & ML',
+      period: '2021 - 2025'
+    }
+]
 //   const professionalExperiences: Experience[] = [];
 
   const achievements: Achievement[] = [
@@ -301,6 +322,45 @@ function App() {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+              <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16">Educational Experience</h2>
+            <div className="space-y-12">
+              {ed_experiences.map((exp, index) => (
+                <div 
+                  key={exp.id}
+                  className="relative group"
+                >
+                  {/* Timeline connector */}
+                  {index !== ed_experiences.length - 1 && (
+                    <div className="absolute left-8 top-16 w-0.5 h-24 bg-purple-500/30 group-hover:bg-purple-500/50 transition-colors" />
+                  )}
+                  
+                  <div className="flex gap-8">
+                    {/* Timeline dot */}
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-all">
+                        <Building className="w-8 h-8 text-purple-400" />
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="flex-1 bg-white/5 rounded-2xl p-8 border border-white/10 group-hover:bg-white/10 transition-all">
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold">{exp.colloge}</h3>
+                          <p className="text-purple-400">{exp.course}</p>
+                        </div>
+                        <div className="flex items-center text-gray-400">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>{exp.period}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
